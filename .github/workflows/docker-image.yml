@@ -15,6 +15,6 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
     - name: Build Docker image    
-      run: docker build . --file Dockerfile --tag miaojun/ubuntu-tools:22.04
+      run: docker build . --file Dockerfile --tag miaojun/ubuntu:tools-22.04
     - name: Push Image
-      run: docker push miaojun/ubuntu-tools:22.04
+      run: docker push miaojun/ubuntu:tools-22.04
