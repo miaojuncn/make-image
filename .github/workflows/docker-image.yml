@@ -12,9 +12,10 @@ jobs:
     - name: DockerHub Login
       uses: docker/login-action@v3.0.0
       with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        registry: registry.cn-hangzhou.aliyuncs.com
+        username: ${{ secrets.REGISRRY_USERNAME }}
+        password: ${{ secrets.REGISRRY_PASSWORD }}
     - name: Build Docker image    
-      run: docker build . --file Dockerfile --tag miaojun/ubuntu:tools-22.04
+      run: docker build . --file Dockerfile --tag registry.cn-hangzhou.aliyuncs.com/mj-mirror/mypython:0320
     - name: Push Image
-      run: docker push miaojun/ubuntu:tools-22.04
+      run: docker push registry.cn-hangzhou.aliyuncs.com/mj-mirror/mypython:0320
