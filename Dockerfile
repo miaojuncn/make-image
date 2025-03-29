@@ -17,6 +17,6 @@ EXPOSE 22
 
 COPY requirements.txt .
 
-RUN pip install --no-cache-dir torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118 && pip install --no-cache-dir -r requirements.txt
+RUN pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu118 && pip install --no-cache-dir -r requirements.txt
 
 ENTRYPOINT ["/run.sh"]
