@@ -18,4 +18,4 @@ jobs:
     - name: Build Docker image    
       run: docker build . --file Dockerfile --tag registry.cn-hangzhou.aliyuncs.com/mj-mirror/mypython:0415
     - name: Push Image
-      run: docker push registry.cn-hangzhou.aliyuncs.com/mj-mirror/mypython:0320
+      run: docker push registry.cn-hangzhou.aliyuncs.com/mj-mirror/mypython:0415
