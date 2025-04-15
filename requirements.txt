@@ -44,7 +44,7 @@ librosa==0.10.2.post1
 llvmlite==0.38.1
 lmdb==1.3.0
 Markdown==3.7
-MarkupSafe==3.0.2
+MarkupSafe==2.1.5
 matplotlib==3.4.2
 mccabe==0.6.1
 mpmath==1.3.0
