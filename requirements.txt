@@ -1,6 +1,6 @@
 absl-py==2.1.0
 attrs==23.2.0
-audiomentations==0.40.0
+audiomentations==0.39.0
 audioread==2.1.9
 augly==0.2.1
 av==14.0.1
