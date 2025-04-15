@@ -5,9 +5,7 @@ audioread
 augly
 av
 cachetools
-certifi
 cffi
-charset-normalizer
 cloudpickle
 coloredlogs
 colorlog
@@ -31,7 +29,6 @@ grpcio
 h5py
 huggingface-hub
 humanfriendly
-idna
 importlib_metadata
 iopath
 joblib
@@ -52,14 +49,12 @@ msgpack
 networkx
 nlpaug
 numba
-numpy==2.2.4
 numpy-minmax
 numpy-rms
 oauthlib
 onnxruntime
 packaging
 pandas
-pillow
 platformdirs
 pooch
 portalocker
@@ -78,7 +73,6 @@ python-stretch
 pytz
 PyYAML
 regex
-requests
 requests-oauthlib
 rsa
 safetensors
@@ -102,8 +96,6 @@ torchnet
 tornado
 tqdm
 transformers
-typing_extensions
-urllib3
 uuid
 vidgear
 visdom
