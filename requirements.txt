@@ -52,7 +52,7 @@ msgpack
 networkx
 nlpaug
 numba
-numpy
+numpy==2.2.4
 numpy-minmax
 numpy-rms
 oauthlib
