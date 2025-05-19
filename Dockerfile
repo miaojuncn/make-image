@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -9,8 +9,7 @@ RUN apt update && apt install -y ssh sudo python3 python3-pip && ln -s /usr/bin/
 RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config && \
     sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config && \
     echo "root:123456" | chpasswd && \
-    mkdir -p /var/run/sshd && pip install "pip<22.2"
-
+    mkdir -p /var/run/sshd
 ADD run.sh /run.sh
 
 EXPOSE 22
