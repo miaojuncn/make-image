@@ -9,7 +9,6 @@ filelock==3.13.1
 fonttools==4.58.0
 fsspec==2024.6.1
 idna==3.10
-Jinja2==3.1.4
 joblib==1.5.0
 kiwisolver==1.4.8
 lazy_loader==0.4
@@ -22,19 +21,6 @@ msgpack==1.1.0
 networkx==3.3
 numba==0.61.2
 numpy==2.1.2
-nvidia-cublas-cu12==12.6.4.1
-nvidia-cuda-cupti-cu12==12.6.80
-nvidia-cuda-nvrtc-cu12==12.6.77
-nvidia-cuda-runtime-cu12==12.6.77
-nvidia-cudnn-cu12==9.5.1.17
-nvidia-cufft-cu12==11.3.0.4
-nvidia-curand-cu12==10.3.7.77
-nvidia-cusolver-cu12==11.7.1.2
-nvidia-cusparse-cu12==12.5.4.2
-nvidia-cusparselt-cu12==0.6.3
-nvidia-nccl-cu12==2.21.5
-nvidia-nvjitlink-cu12==12.6.85
-nvidia-nvtx-cu12==12.6.77
 packaging==25.0
 pandas==2.2.3
 pathlib==1.0.1
@@ -52,9 +38,7 @@ scipy==1.15.3
 six==1.17.0
 soundfile==0.13.1
 soxr==0.5.0.post1
-sympy==1.13.1
 threadpoolctl==3.6.0
 tqdm==4.67.1
-triton==3.2.0
 tzdata==2025.2
 urllib3==2.4.0
