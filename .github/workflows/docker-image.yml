@@ -16,6 +16,6 @@ jobs:
         username: ${{ secrets.REGISRRY_USERNAME }}
         password: ${{ secrets.REGISRRY_PASSWORD }}
     - name: Build Docker image    
-      run: docker build . --file Dockerfile --tag registry.cn-hangzhou.aliyuncs.com/mj-mirror/mypython:0415
+      run: docker build . --file Dockerfile --tag registry.cn-hangzhou.aliyuncs.com/mj-mirror/mypython:0519
     - name: Push Image
-      run: docker push registry.cn-hangzhou.aliyuncs.com/mj-mirror/mypython:0415
+      run: docker push registry.cn-hangzhou.aliyuncs.com/mj-mirror/mypython:0519
