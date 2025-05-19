@@ -1,9 +1,8 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN sed -i 's@http://archive.ubuntu.com@http://mirrors.aliyun.com@g' /etc/apt/sources.list && \
-    apt update && apt install -y ssh sudo python3 python3-pip && ln -s /usr/bin/python3 /usr/bin/python && \
+RUN apt update && apt install -y ssh sudo python3 python3-pip && ln -s /usr/bin/python3 /usr/bin/python && \
     apt-get autoclean && apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
 
@@ -17,6 +16,6 @@ EXPOSE 22
 
 COPY requirements.txt .
 
-RUN pip install --no-cache-dir torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html && pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu126 && pip install --no-cache-dir -r requirements.txt
 
 ENTRYPOINT ["/run.sh"]
