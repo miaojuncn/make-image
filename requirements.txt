@@ -52,7 +52,7 @@ python-dateutil
 pytorch-metric-learning==2.3.0
 pytz==2023.3.post1
 PyYAML==6.0.1
-requests
+requests>=2.23.0
 resampy==0.4.2
 scikit-learn==0.24.2
 scipy==1.10.1
@@ -72,7 +72,7 @@ tqdm==4.64.1
 tzdata==2023.3
 ultralytics==8.3.78
 ultralytics-thop==2.0.14
-urllib3
+urllib3>=1.26.11
 vmdpy==0.2
 wandb==0.13.11
 wget==3.2
