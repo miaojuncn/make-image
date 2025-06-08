@@ -6,14 +6,18 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-22.04-arm
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
-    - name: Install Tools
-      run: brew update && brew install uv
+    - name: Install uv
+      run: |
+        curl -L https://github.com/astral-sh/uv/releases/latest/download/uv-aarch64-unknown-linux-gnu.tar.gz -o uv.tar.gz
+        tar -xzf uv.tar.gz
+        sudo install uv /usr/local/bin/uv
+        uv --version
     - name: Change Project
-      run: sed -i '' 's/xgboost==1.5.0/xgboost==1.6.0/g' pyproject.toml
+      run: sed -i 's/xgboost==1.5.0/xgboost==1.6.0/g' pyproject.toml
     - name: Install Dependency
       run: uv run download_deps.py
 
