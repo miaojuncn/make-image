@@ -13,7 +13,7 @@ jobs:
     - name: Install Tools
       run: brew update && brew install uv
     - name: Change Project
-      run: sed -i s/xgboost==1.5.0/xgboost==1.6.0/g pyproject.toml
+      run: sed -i '' 's/xgboost==1.5.0/xgboost==1.6.0/g' pyproject.toml
     - name: Install Dependency
       run: uv run download_deps.py
 #    - name: DockerHub Login
