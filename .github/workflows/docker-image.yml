@@ -14,7 +14,7 @@ jobs:
       run: |
         curl -L https://github.com/astral-sh/uv/releases/latest/download/uv-aarch64-unknown-linux-gnu.tar.gz -o uv.tar.gz
         tar -xzf uv.tar.gz
-        sudo install uv /usr/local/bin/uv
+        sudo mv uv-aarch64-unknown-linux-gnu/* usr/local/bin/
         uv --version
     - name: Change Project
       run: sed -i 's/xgboost==1.5.0/xgboost==1.6.0/g' pyproject.toml
