@@ -23,8 +23,9 @@ RUN curl -sSL https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64
 ENV PATH=$CONDA_DIR/bin:$PATH
 
 COPY env.yaml /tmp/env.yaml
-
-RUN conda env create -f /tmp/env.yaml && conda clean -afy
+RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main && \
+    conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r && \
+    conda env create -f /tmp/env.yaml && conda clean -afy
 SHELL ["conda", "run", "-n", "chameile", "/bin/bash", "-c"]
 
 
