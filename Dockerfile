@@ -29,5 +29,5 @@ RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkg
 ENV PATH=$CONDA_DIR/envs/chameile/bin:$PATH
 
 SHELL ["conda", "run", "-n", "chameile", "/bin/bash", "-c"]
-
-CMD ["/usr/sbin/sshd", "-D"]
+COPY run.sh /run.sh
+ENTRYPOINT ["/run.sh"]
