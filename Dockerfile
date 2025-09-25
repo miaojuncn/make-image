@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN sed -i 's@http://archive.ubuntu.com@http://mirrors.aliyun.com@g' /etc/apt/sources.list && \
-    apt update && apt install -y ssh sudo && \
+    apt update && apt install -y ssh sudo curl && \
     apt-get autoclean && apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
 
