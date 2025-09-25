@@ -21,9 +21,6 @@ RUN curl -sSL https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64
     && rm /tmp/miniconda.sh \
 
 ENV PATH=$CONDA_DIR/bin:$PATH
-RUN conda config --system --remove-key channels || true && \
-    conda config --system --add channels conda-forge && \
-    conda config --system --add channels defaults
 
 COPY env.yaml /tmp/env.yaml
 
